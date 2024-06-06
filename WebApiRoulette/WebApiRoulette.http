@@ -1,0 +1,6 @@
+@WebApiRoulette_HostAddress = http://localhost:5004
+
+GET {{WebApiRoulette_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
