@@ -52,7 +52,6 @@ namespace WebApiRoulette.Services
                 TotalAmount = user.Saldo,
                 Winnings = win ? winnings : -betAmount
             };
-
             return result;
         }
 

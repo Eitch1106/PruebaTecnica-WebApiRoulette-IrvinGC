@@ -60,11 +60,11 @@ namespace WebApiRoulette.Controllers
                 return NotFound();
             }
 
-            if (existingUser.Name != user.Name)
+           /* if (existingUser.Name != user.Name)
             {
                 //return BadRequest();
                 existingUser.Name = user.Name;
-            }
+            }*/
                 existingUser.Saldo = user.Saldo;
 
             _context.Entry(existingUser).State = EntityState.Modified;
@@ -78,7 +78,7 @@ namespace WebApiRoulette.Controllers
                     return NotFound();
             }
 
-            return NoContent();
+            return Ok(new { saldo = existingUser.Saldo });
         }
 
         // POST: api/User

@@ -22,10 +22,11 @@ namespace WebApiRoulette.Controllers
             {
                 return BadRequest(ModelState);
             }
+            Console.WriteLine("probando: " + request.UserName+" "+request.BetType+" "+request.BetValue+" "+request.BetAmount);
 
             // Procesar la solicitud y obtener el resultado
             var result = await _rouletteService.SpinRoulette(request.UserName, request.BetType, request.BetValue, request.BetAmount);
-
+      
             return Ok(result);
         }
     }
